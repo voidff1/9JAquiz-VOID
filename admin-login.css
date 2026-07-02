@@ -1,0 +1,57 @@
+body{
+  min-height:100vh;
+  background:url("./images/9jaquiz-bg.png") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+}
+
+.admin-card{
+  width:400px;
+  padding:35px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.22);
+  backdrop-filter:blur(20px);
+  text-align:center;
+}
+
+input{
+  width:100%;
+  padding:15px;
+  margin:12px 0;
+  border:none;
+  border-radius:12px;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+a{
+  display:block;
+  margin-top:15px;
+  color:#2563eb;
+}
+.settings-box{
+  max-width:500px;
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.settings-box label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+  font-weight:bold;
+  color:#1e3a8a;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9ja Quiz Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-card">
+
+    <div class="dashboard-header">
+      <div><h1>
+        <p class="small-title">9ja Quiz Player Dashboard</p>
+        </h1>
+        <h1>Welcome, <span id="username">Player</span> 👋</h1>
+      </div>
+
+      <button class="logout-btn" onclick="window.location.href='login.html'">
+        Logout
+      </button>
+    </div>
+
+    <div class="prize-card">
+      <p>Weekly Prize Pool</p>
+      <h1 id="weeklyPrizeText">₦50,000</h1>
+      <span>Winner selected every Sunday</span>
+    </div>
+
+    <div class="stats">
+      <div>
+        <h3>4,782</h3>
+        <p>Total Players</p>
+      </div>
+
+      <div>
+        <h3 id="entryFeeText">₦50</h3>
+        <p>Entry Fee</p>
+      </div>
+
+      <div>
+        <h3>Sunday</h3>
+        <p>Winner Day</p>
+      </div>
+    </div>
+
+    <div class="status-box">
+      <p id="paymentStatus">Checking payment status...</p>
+    </div>
+
+    <div class="main-actions">
+      <button id="startBtn">Checking...</button>
+    </div>
+    <div class="contact-box">
+  <h3>Enter Payment Details</h3>
+
+  <input id="whatsappInput" placeholder="WhatsApp Number">
+  <input id="emailInput" placeholder="Email Address">
+  <input id="bankNameInput" placeholder="Bank Name">
+  <input id="accountNoInput" placeholder="Account Number">
+  <input id="accountNameInput" placeholder="Account Name">
+
+  <button onclick="saveContactDetails()">
+    Save Contact Details
+  </button>
+</div>
+
+    <div class="quick-links">
+      <button onclick="window.location.href='leaderboard.html'">🏆 Leaderboard</button>
+      <button onclick="window.location.href='winners.html'">🎖 Winners</button>
+      <button onclick="window.location.href='profile.html'">👤 My Profile</button>
+    </div>
+<button class="logout-btn" onclick="logout()">
+  Logout
+</button>
+  </div>
+<script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9ja Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-card">
+    <h1>Quiz Page</h1>
+
+    <div class="timer-box">
+      <p>Countdown</p>
+      <h2 id="timer">60s</h2>
+    </div>
+
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <div class="question-card">
+      <p id="questionNumber"></p>
+      <h2 id="questionText">Loading...</h2>
+    </div>
+
+    <p class="choose-text">Choose answer</p>
+
+    <div id="options" class="options-grid"></div>
+
+    <div class="buttons">
+      <button id="prevBtn"
+      class="outline-btn">Previous</button>
+      <button id="nextBtn"
+      class="outline-btn">Next</button>
+      <button id="submitBtn"
+      class="main-btn">Submit</button>
+    </div>
+
+    <h2 id="result"></h2>
+  </div>
+<script src="auth.js"></script>
+  <script src="script.js?v=2"></script>
+</body>
+</html>

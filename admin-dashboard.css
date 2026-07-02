@@ -1,0 +1,391 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:url("./images/9jaquiz-bg2.png") center/cover no-repeat;
+  color:#111827;
+}
+
+.admin-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:260px;
+  background:linear-gradient(180deg,#1e3a8a,#2563eb);
+  color:white;
+  padding:25px 18px;
+  position:fixed;
+  height:100vh;
+  left:0;
+  top:0;
+}
+
+.sidebar h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:22px;
+}
+
+.sidebar button{
+  width:100%;
+  border:none;
+  background:transparent;
+  color:white;
+  padding:14px 16px;
+  text-align:left;
+  border-radius:12px;
+  margin-bottom:10px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.sidebar button:hover{
+  background:rgba(255,255,255,.2);
+  transform:translateX(5px);
+}
+
+.content{
+  margin-left:260px;
+  width:calc(100% - 260px);
+  padding:35px;
+}
+
+.page-section{
+  display:none;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(15px);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 15px 45px rgba(0,0,0,.12);
+}
+
+.page-section.active{
+  display:block;
+}
+
+.page-section h1{
+  color:#1e3a8a;
+  margin-bottom:25px;
+  font-size:32px;
+}
+
+/* TABLE DESIGN */
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 12px;
+}
+
+thead tr{
+  background:#2563eb;
+  color:white;
+}
+
+th{
+  padding:16px;
+  font-size:14px;
+}
+
+td{
+  background:white;
+  padding:16px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+tbody tr td:first-child{
+  border-radius:14px 0 0 14px;
+  font-weight:bold;
+}
+
+tbody tr td:last-child{
+  border-radius:0 14px 14px 0;
+}
+
+/* INPUTS */
+input,
+textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:1px solid #d1d5db;
+  border-radius:14px;
+  font-size:15px;
+  background:white;
+}
+
+textarea{
+  min-height:130px;
+  resize:none;
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* MAIN BUTTONS */
+.main-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  font-size:15px;
+  cursor:pointer;
+  margin-bottom:15px;
+  transition:.3s;
+}
+
+.main-btn:hover{
+  background:#1d4ed8;
+  transform:translateY(-2px);
+}
+
+.approve-btn{
+  background:#16a34a;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.reject-btn{
+  background:#dc2626;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  margin-left:8px;
+}
+
+.edit-btn{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  margin-right:8px;
+}
+
+/* USERS / PAYMENTS BETTER WIDTH */
+#users table,
+#payments table{
+  font-size:14px;
+}
+
+/* WINNERS SECTION */
+#winners{
+  max-width:900px;
+}
+
+#winners input,
+#winners textarea{
+  background:#f9fafb;
+}
+
+#winners .main-btn{
+  margin-top:5px;
+}
+
+/* SETTINGS SECTION */
+.settings-box{
+  max-width:600px;
+  background:white;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.settings-box label{
+  display:block;
+  margin-bottom:8px;
+  margin-top:15px;
+  font-weight:bold;
+  color:#1e3a8a;
+}
+
+/* QUESTION CARDS */
+.question-form{
+  background:white;
+  padding:25px;
+  border-radius:22px;
+  margin-bottom:25px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.question-item{
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  margin-bottom:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.question-item h3{
+  color:#1e3a8a;
+  margin-bottom:10px;
+}
+
+.question-item p{
+  margin:6px 0;
+}
+
+/* SEARCH */
+#userSearch{
+  max-width:400px;
+  margin-bottom:20px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .admin-layout{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+
+  .content{
+    margin-left:0;
+    width:100%;
+    padding:20px;
+  }
+
+  table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  .page-section{
+    padding:20px;
+  }
+}
+.table-box{
+  width:100%;
+  overflow-x:auto;
+  background:white;
+  border-radius:18px;
+  padding:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.table-box table{
+  min-width:1000px;
+  width:100%;
+  border-collapse:collapse;
+  border-spacing:0;
+  background:white;
+}
+
+.table-box thead{
+  background:#2563eb;
+  color:white;
+}
+
+.table-box th{
+  padding:15px;
+  font-size:14px;
+  text-align:left;
+  white-space:nowrap;
+}
+
+.table-box td{
+  padding:15px;
+  font-size:14px;
+  text-align:left;
+  border-bottom:1px solid #e5e7eb;
+  background:white;
+  box-shadow:none;
+  vertical-align:middle;
+}
+
+.table-box tr:nth-child(even) td{
+  background:#f8fafc;
+}
+
+.table-box tbody tr td:first-child,
+.table-box tbody tr td:last-child{
+  border-radius:0;
+}
+
+.approve-btn,
+.reject-btn,
+.edit-btn{
+  display:inline-block;
+  margin:4px;
+  min-width:75px;
+}
+#logs table{
+
+    width:100%;
+
+}
+
+#logs td{
+
+    font-size:14px;
+
+}
+
+#logs tr:hover{
+
+    background:#f3f4f6;
+
+}
+
+#logs th{
+
+    background:#1d4ed8;
+
+    color:white;
+
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.stat-card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  border-left:6px solid #2563eb;
+}
+
+.stat-card h3{
+  font-size:15px;
+  color:#1e3a8a;
+  margin-bottom:12px;
+}
+
+.stat-card p{
+  font-size:32px;
+  font-weight:bold;
+  color:#111827;
+}

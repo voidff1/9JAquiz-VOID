@@ -1,0 +1,162 @@
+body{
+  margin:0;
+  padding:30px;
+  font-family:'Segoe UI',sans-serif;
+  background:url("./images/9jaquiz-bg2.png");
+  background-size:cover;
+  background-position:center;
+  min-height:100vh;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(12px);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+.header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.header h1{
+  margin:0;
+  color:#2563eb;
+}
+
+.header p{
+  color:#666;
+}
+
+.section{
+  margin-bottom:30px;
+}
+
+h2{
+  color:#1e3a8a;
+  margin-bottom:15px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:15px;
+  background:white;
+}
+
+thead{
+  background:#2563eb;
+  color:white;
+}
+
+th,
+td{
+  padding:15px;
+  text-align:center;
+}
+
+tr:nth-child(even){
+  background:#f3f4f6;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  margin-bottom:15px;
+  font-size:15px;
+}
+
+textarea{
+  height:140px;
+  resize:none;
+}
+
+.winner-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.action-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.action-buttons button{
+  flex:1;
+  min-width:180px;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#updateWinnerBtn{
+  background:#2563eb;
+}
+
+#manageQuestionsBtn{
+  background:#10b981;
+}
+
+#viewWinnersBtn{
+  background:#f59e0b;
+}
+
+#logoutBtn{
+  background:#ef4444;
+}
+
+button:hover{
+  opacity:0.9;
+}
+.approve-btn{
+  background:#16a34a;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.approve-btn:hover{
+  background:#15803d;
+  transform:scale(1.05);
+}
+
+.reject-btn{
+  background:#dc2626;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  margin-left:8px;
+  transition:.3s;
+}
+
+.reject-btn:hover{
+  background:#b91c1c;
+  transform:scale(1.05);
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9ja Quiz Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-payments.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>🛡️ Admin Dashboard</h1>
+      <p>Manage Payments, Winners and Questions</p>
+    </div>
+
+    <div class="section">
+
+      <h2>💳 Payment Approvals</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Sender</th>
+            <th>Reference</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="paymentsBody"></tbody>
+
+      </table>
+
+    </div>
+
+    <div class="section">
+
+      <h2>🏆 Weekly Winner</h2>
+
+      <button class="winner-btn" onclick="selectWinner()">
+        Select Weekly Winner
+      </button>
+
+    </div>
+
+    <div class="section">
+
+      <h2>🧾 Winner Payment Proof</h2>
+
+      <input
+        id="winnerId"
+        type="number"
+        placeholder="Enter Winner ID"
+      >
+
+      <textarea
+        id="proofText"
+        placeholder="Enter payment proof details..."
+      ></textarea>
+
+      <div class="action-buttons">
+
+        <button
+          id="updateWinnerBtn"
+          onclick="updateWinnerProof()"
+        >
+          Update Winner Proof
+        </button>
+
+        <button
+          id="manageQuestionsBtn"
+          onclick="window.location.href='admin-questions.html'"
+        >
+          Manage Questions
+        </button>
+
+        <button
+          id="viewWinnersBtn"
+          onclick="window.location.href='winners.html'"
+        >
+          View Winners
+        </button>
+
+        <button
+          id="logoutBtn"
+          onclick="logoutAdmin()"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+<script src="auth.js"></script>
+  <script src="admin-payments.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+  min-height:100vh;
+  background:url("./images/9jaquiz-bg.png") center/cover no-repeat;
+  font-family:'Segoe UI',sans-serif;
+  padding:30px;
+}
+
+.profile-container{
+  max-width:900px;
+  margin:auto;
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(20px);
+  border-radius:25px;
+  padding:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.8);
+  padding:20px;
+  border-radius:18px;
+  margin-bottom:25px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:12px;
+  border-bottom:1px solid #ddd;
+  text-align:left;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}

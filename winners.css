@@ -1,0 +1,73 @@
+body{
+  min-height:100vh;
+  background:url("./images/9jaquiz-bg3.png") center/cover no-repeat;
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.winner-page{
+  width:90%;
+  max-width:850px;
+  background:rgba(255,255,255,0.22);
+  backdrop-filter:blur(20px);
+  border-radius:25px;
+  padding:35px;
+}
+
+.profile-card{
+  background:#2563eb;
+  color:white;
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.receipt-card,
+.previous-card{
+  background:rgba(255,255,255,0.75);
+  padding:20px;
+  border-radius:18px;
+  margin:15px 0;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:15px;
+}
+.receipt-img{
+  width:100%;
+  max-height:350px;
+  object-fit:contain;
+  margin-top:15px;
+  border-radius:15px;
+  background:white;
+}
+.receipt-img{
+  width:100%;
+  max-height:400px;
+  object-fit:contain;
+  margin-top:15px;
+  border-radius:15px;
+  background:white;
+  padding:10px;
+}
+
+.small-receipt-img{
+  width:100%;
+  max-height:220px;
+  object-fit:contain;
+  margin-top:10px;
+  border-radius:12px;
+  background:white;
+  padding:8px;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9ja Quiz Admin</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <h2>🛡️ 9JA ADMIN</h2>
+      <button onclick="showSection('overview')">
+  🏠 Overview
+</button>
+      <button onclick="showSection('users')">👥 Users</button>
+
+      <button onclick="showSection('payments')">💳 Payments</button>
+      <button onclick="showSection('winners')">🏆 Winners</button>
+      <button onclick="showSection('questions')">❓ Questions</button>
+      <button onclick="showSection('settings')">⚙️ Settings</button>
+      <button onclick="showSection('logs')">
+    📜 Activity Log
+</button>
+      <button onclick="showSection('stats')">📊 Stats</button>
+      <button onclick="logoutAdmin()">🚪 Logout</button>
+    </aside>
+
+    <main class="content">
+      <section id="overview" class="page-section active">
+
+  <h1>🏠 Admin Overview</h1>
+
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <h3>👥 Total Users</h3>
+      <p id="totalUsers">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>💰 Revenue</h3>
+      <p id="totalRevenue">₦0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>✅ Approved Payments</h3>
+      <p id="approvedPayments">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>⏳ Pending Payments</h3>
+      <p id="pendingPayments">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>❌ Rejected Payments</h3>
+      <p id="rejectedPayments">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>📝 Quiz Attempts</h3>
+      <p id="totalAttempts">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>❓ Questions</h3>
+      <p id="totalQuestions">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>🏆 Winners</h3>
+      <p id="totalWinners">0</p>
+    </div>
+
+  </div>
+
+</section>
+      <section id="users" class="page-section">
+
+  <h1>👥 Registered Users</h1>
+
+  <input
+    id="userSearch"
+    type="text"
+    placeholder="Search username..."
+    onkeyup="searchUsers()"
+  >
+<div class="table-box">
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Quiz Access</th>
+        <th>Joined</th>
+      </tr>
+    </thead>
+
+    <tbody id="usersBody"></tbody>
+
+  </table>
+</div>
+</section>
+
+      <section id="payments" class="page-section active">
+        <h1>Payment Approvals</h1>
+<div class="table-box">
+
+        <table>
+         <thead>
+  <tr>
+  <th>Username</th>
+  <th>Email</th>
+
+  <th>Bank Details</th>
+  <th>Quiz Access</th>
+  <th>Action</th>
+  
+</tr>
+</thead>
+          <tbody id="paymentsBody"></tbody>
+        </table>
+</div>
+      </section>
+
+      <section id="winners" class="page-section">
+        <h1>Weekly Winner</h1>
+
+        <button class="main-btn" onclick="selectWinner()">
+          Select Weekly Winner
+        </button>
+
+        <input id="winnerId" type="number" placeholder="Winner ID">
+
+<textarea id="proofText" placeholder="Payment proof text..."></textarea>
+
+<input id="receiptImage" type="file" accept="image/*">
+
+<button class="main-btn" onclick="updateWinnerProof()">
+  Update Winner Proof
+</button>
+        <button class="main-btn" onclick="endWeek()">
+  🏁 End Weekly Competition
+</button>
+      </section>
+      
+
+      <section id="questions" class="page-section">
+  <h1>Question Manager</h1>
+
+  <div class="question-form">
+    <input id="questionInput" placeholder="Question">
+    <input id="optionA" placeholder="Option A">
+    <input id="optionB" placeholder="Option B">
+    <input id="optionC" placeholder="Option C">
+    <input id="optionD" placeholder="Option D">
+    <input id="answerInput" placeholder="Correct Answer text">
+    <input id="categoryInput" placeholder="Category">
+    <input id="difficultyInput" placeholder="Difficulty">
+
+    <button id="questionSubmitBtn" class="main-btn" onclick="addQuestion()">
+  Add Question
+</button>
+  </div>
+
+  <div id="questionsList"></div>
+</section>
+<section id="settings" class="page-section">
+  <h1>⚙️ App Settings</h1>
+
+  <div class="settings-box">
+    <label>Entry Fee (₦)</label>
+    <input id="entryFee" type="number">
+
+    <label>Weekly Prize (₦)</label>
+    <input id="weeklyPrize" type="number">
+
+    <label>Quiz Timer (seconds)</label>
+    <input id="quizTimer" type="number">
+
+    <label>Questions Per Quiz</label>
+    <input id="questionsPerQuiz" type="number">
+
+    <button class="main-btn" onclick="saveSettings()">
+      Save Settings
+    </button>
+  </div>
+</section>
+<section id="logs" class="page-section">
+
+    <h1>📜 Admin Activity Log</h1>
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Admin</th>
+                    <th>Action</th>
+                    <th>Details</th>
+                    <th>Date</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="logsBody"></tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+      <section id="stats" class="page-section">
+        <h1>Statistics</h1>
+        <p>Coming next...</p>
+      </section>
+
+    </main>
+
+  </div>
+<script src="auth.js"></script>
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>
